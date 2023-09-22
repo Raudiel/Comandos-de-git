@@ -1,0 +1,133 @@
+Curso Git Apuntes
+
+git init   	  {inicia repositorio git en el directorio indicado}
+
+git status        {muestra el estado de los elementos, si estan listos o no para commits}
+
+git status --short {muestra los estados de los elementos de manera corta}
+ 
+git add elemento  {prepara el elemnto para realizar el commit}
+
+git add. 	  {prepara todos los cambios y modificaciones para su posterior commit}
+
+git add *.html    {prepara para commits todos los elementos con dicha extencion}
+
+git reset elemento {quita el elemento de la preparacion para realizar commit}
+
+git reset.        {quita todos los elemntos preparados para commit}
+
+git commit -m "nombre commit" {realiza commit de los elemntos preparados}
+
+git log 	  {muestra todos los commits realizados}
+
+git log --online {muesta los commits en una sola linea} 
+
+git diff          { muestra los cambios realizados en los archivos}
+
+
+
+
+					#VIAJES EN EL TIEMPO
+
+git commit --soft (stage del commit Ej:412f74)  {se mueve hasta dicho commit para hacer nuevas 
+						modificaciones}
+
+git reset --mixed (stage del commit Ej:47f74f)  {se mueve hasta dicho commit pero no borra nada
+						se mantienen los cambios realizados pero nos son 
+						agragados al stage}
+
+git reset --hard (stage del commit Ej:47f74f) {este se mueve hasta dicho commit, pero no 
+					       guarda los cambios hechos anteriormente}
+
+git reflog          {muestra todos los commits realizados a pesar de ser borrados
+		     o sea todo el historial del repositorio}
+
+
+
+					#NO DAR SEGUIMIENTO EN GIT
+
+gitignore { se crea en la raiz del proyecto para indicar que archivos no darle 
+	    seguimiento con git}
+
+
+
+					    #TRABAJO CON RAMAS
+
+git branch (nombre de la rama)  	{cra una rama en git}
+
+git branch 				{muestra las ramas que tenemos}
+
+git checkout -b (nombre de la rama)     {crea una rama nueva y se mueve automaticamente a ella}
+
+git checkout (nombre de la rama) 	{permite moverse a la rama con dicho nombre}
+
+git merget (nombre de la rama)          {une la rama al mai o viseversa}
+
+git branch -d (nombre de la rama)	{elimina la rama}
+
+git branch -d (nombre de la rama) -f	{elimina la rama forzadamente}
+
+					  
+					   #TAGS O ETIQUETAS
+
+git tag (nombre del tag)		{crea una etiqueta}
+
+git tag 				{muestra el nombre de los tag existentes}
+
+git tag -d (nombre del tag)		{elimina el tag}
+
+git tag -a (poner version que desee) -m (mensaje del tag)  {Crea un tag con una version
+							    para ser q sea mas intuitivo 
+							    y le pasa un mesaje}
+git show (nombre del tag)  		{nos brinda mas informacion del tag}
+
+
+
+					    #GIT STASH
+
+git stash				{se guarda todo el directorio de trabajo antes del ultimo commit
+					 en el stash}
+
+git stash list				{nos muestra la referencia del stash}
+
+git stash pop				{nos retorna el ultimo stash realizado}
+
+
+					   #GIT REVASE
+
+git rebase master			{ mueve la rama en la q estemos a la ultima posicion
+					despues del ultimo commit de la rama master}
+
+
+git  rebase -i HEAD~4			{nos permite seleccionar la cantidad de commits que pongamos despues de Head~4,
+					esto nos permite fusionar dos commits con squash}
+					
+				        { reword nos permite actualizar el mensaje del commit} 
+
+					{ edit nos permite editar los commits, o sea poder hacerle modificaciones como
+					separarlos}			
+					 
+			
+				 	    #GITHUB
+
+
+					     #PUSH
+
+git push -u origin main			{sube el proyecto a un repositorio}
+
+git push --tags				{sube los tags al repositorio}
+
+				            #PULL
+
+git pull 				{nos permite obtenes los ultimos cambios hechos en el repositorio}
+
+
+
+
+
+
+
+
+
+
+
